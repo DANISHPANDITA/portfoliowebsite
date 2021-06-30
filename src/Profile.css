@@ -1,0 +1,126 @@
+/** @format */
+.profile {
+  flex: 0.7;
+  background: #5433ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #a5fecb,
+    #20bdff,
+    #5433ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #a5fecb,
+    #20bdff,
+    #5433ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.projectImage {
+  width: 70%;
+}
+.profile h2,
+h3,
+h5,
+p {
+  font-family: cursive;
+  text-align: center;
+}
+.horRow {
+  width: 95%;
+  border-width: 1px;
+}
+.profile h3 {
+  color: rgb(177, 255, 153);
+  text-decoration: underline;
+}
+.profile h2 {
+  color: rgb(131, 54, 54);
+  font-size: xx-large;
+  font-style: italic;
+  text-decoration: underline;
+}
+.linktootherpage {
+  color: rgb(61, 192, 192);
+  transition: 250ms all;
+}
+.linktootherpage:hover {
+  cursor: pointer;
+  color: rgb(121, 241, 241);
+  text-decoration: underline;
+}
+
+.schoolProfile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgb(75, 128, 110);
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.9vw;
+  padding: 0.7vw 0 0.7vw 0;
+  margin-bottom: 2vh;
+}
+.schoolProfileDetails {
+  flex: 0.7;
+}
+.schoolImgMap {
+  flex: 0.3;
+}
+.schoolImgMapImage {
+  border-radius: 0.5vw;
+  object-fit: contain;
+  height: auto;
+  width: 90%;
+  transition: 250ms ease-in-out;
+}
+.schoolImgMapImage:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.project {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.9vw;
+  padding: 0.7vw 0 0.7vw 0;
+  margin-bottom: 2vh;
+  background-color: rgb(75, 128, 110);
+}
+.gotocontact {
+  font-weight: 1000;
+  color: rgb(164, 231, 102);
+  transition: 250ms ease-in-out;
+  font-style: italic;
+}
+.gotocontact:hover {
+  cursor: pointer;
+  color: rgb(199, 89, 89);
+}
+.descProject {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.8vw;
+  padding: 0.5vh 1vh 0.5vh 1vh;
+  width: 90%;
+  background-color: rgb(228, 235, 210);
+}
+@media only screen and (max-width: 599px) {
+  .schoolProfile {
+    flex-direction: column;
+    border-radius: 1.5vw;
+  }
+  .schoolImgMapImage {
+    border-radius: 1.3vw;
+  }
+  .descProject {
+    text-align: justify;
+    font-size: small;
+  }
+  .profile h2 {
+    font-size: large;
+  }
+  .profile h3 {
+    font-size: small;
+  }
+}

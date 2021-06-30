@@ -1,0 +1,13 @@
+/** @format */
+
+.App {
+  min-height: 100vh;
+  background-color: #5b8a72;
+  display: flex;
+  flex-direction: row;
+}
+@media only screen and (max-width: 599px) {
+  .App {
+    flex-direction: column;
+  }
+}

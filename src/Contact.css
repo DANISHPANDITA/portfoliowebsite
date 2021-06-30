@@ -1,0 +1,209 @@
+/** @format */
+
+.contact {
+  flex: 0.7;
+
+  background: #a8ff78; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #78ffd6,
+    #a8ff78
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #78ffd6,
+    #a8ff78
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.contactTitle {
+  margin-top: 0;
+  font-size: xx-large;
+  font-weight: bolder;
+  font-style: oblique;
+  text-align: center;
+  text-decoration: underline;
+  color: rgb(15, 15, 75);
+  background-color: rgb(79, 248, 211);
+  padding: 1vh 0 1vh 0;
+}
+.contactField {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(176, 228, 192);
+  margin-bottom: 2vh;
+  padding: 0 1.5vh 0 1.5vh;
+  border-radius: 0.5vw;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  transition: 250ms ease-in-out;
+}
+.contactOptTitle {
+  font-weight: bolder;
+  color: rgb(178, 5, 184);
+  text-decoration: underline;
+}
+.contactField:hover {
+  background-color: rgb(144, 223, 144);
+}
+.contactOptRedirect {
+  font-style: oblique;
+  color: rgb(114, 107, 4);
+  transition: 250ms ease-in-out;
+}
+.contactOptRedirect:hover {
+  color: orangered;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.sendMailTitle {
+  font-size: large;
+  font-weight: bolder;
+  font-style: oblique;
+  text-align: center;
+  text-decoration: underline;
+  color: rgb(15, 15, 75);
+}
+.MailSendForm {
+  margin-bottom: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #11998e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #38ef7d,
+    #11998e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #38ef7d,
+    #11998e
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1.7vh;
+}
+.formLabel {
+  font-family: cursive;
+  font-weight: bold;
+  margin-top: 1.5vh;
+}
+
+.formData {
+  margin-top: 0.8vh;
+  width: 75%;
+  height: 4vh;
+  border-radius: 0.4vw;
+  border: none;
+  outline: none;
+  background-color: rgb(132, 175, 167) !important;
+  color: white !important;
+  font-family: cursive;
+  padding: 0.8vh 0 0.8vh 4vh;
+  font-size: large;
+}
+.formDataOne {
+  margin-top: 0.8vh;
+  width: 75%;
+  height: 15vh;
+  border-radius: 0.4vw;
+  border: none;
+  outline: none;
+  background-color: rgb(132, 175, 167) !important;
+  color: white !important;
+  font-family: cursive;
+  padding: 0.8vh 0 0.8vh 5vh;
+  font-size: large;
+}
+
+.formDataOne::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+.formDataOne::-webkit-scrollbar-track {
+  background: #14743f;
+}
+
+/* Handle */
+.formDataOne::-webkit-scrollbar-thumb {
+  background: rgb(138, 209, 159);
+}
+
+/* Handle on hover */
+.formDataOne::-webkit-scrollbar-thumb:hover {
+  background: rgb(57, 85, 69);
+}
+
+.btnMailSubmit {
+  width: 50%;
+  margin-top: 1.5vh;
+  margin-bottom: 1vh;
+  border: none;
+  border-radius: 0.8vw;
+  background-color: #519b72;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+  font-family: cursive;
+  transition: 250ms ease-in-out;
+  padding: 0.6vh 3vh 0.6vh 3vh;
+}
+.btnMailSubmit:hover {
+  cursor: pointer;
+  background-color: rgb(110, 204, 110);
+  color: rgb(92, 92, 92);
+}
+.sentMailLine {
+  margin-top: 5vh;
+  color: rgb(255, 196, 0);
+  background-color: rgb(59, 100, 95);
+  padding: 0.7vh 5vh 0.7vh 5vh;
+  font-weight: bold;
+  font-style: oblique;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.6vw;
+  font-size: xx-large;
+}
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .MailSendForm {
+    width: 70%;
+  }
+  .contactTitle {
+    font-size: large;
+  }
+  .sentMailLine {
+    border-radius: 0.9vw;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .contact {
+    flex: 0.8;
+  }
+  .contactField {
+    flex-direction: column;
+  }
+  .contactTitle {
+    font-size: medium;
+  }
+  .MailSendForm {
+    width: 90%;
+  }
+  .sendMailTitle {
+    font-size: small;
+  }
+  .sentMailLine {
+    font-size: small;
+    border-radius: 1.3vw;
+  }
+}

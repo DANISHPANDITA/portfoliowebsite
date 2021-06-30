@@ -1,0 +1,83 @@
+/** @format */
+
+.home {
+  flex: 0.7;
+}
+.homeDetails {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2vw;
+  height: 90vh;
+  width: 95%;
+  background-color: #1b523d !important;
+  text-align: center;
+  background: url("./img/homeBack.jpg") no-repeat;
+  background-position: center;
+  background-blend-mode: soft-light;
+}
+.homeDetails h2,
+p {
+  font-family: cursive;
+}
+.helloHeading h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: cursive;
+  padding-top: 10vh;
+  font-size: 2.7em;
+  font-weight: bolder;
+  font-style: italic;
+  color: rgb(243, 85, 85);
+}
+.helloSignImage {
+  margin-top: 5vh;
+  height: 2.5em;
+  width: 2.5em;
+}
+.homeDetails p {
+  margin-top: 1vh;
+  color: rgb(137, 221, 58);
+  font-weight: 800;
+  font-style: oblique;
+  font-size: large;
+}
+.homeDetails h2 {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: xx-large;
+  font-style: oblique;
+  border-radius: 0.9vw;
+  color: rgb(139, 116, 13);
+  background-color: #5ddbab;
+  width: fit-content;
+  padding: 0.7vh 2vw 0.7vh 2vw;
+  margin-top: 1vh;
+}
+.homeOwnDetails {
+  margin-top: 9vh;
+}
+.gotoprofile {
+  font-weight: 1000;
+  color: rgb(164, 231, 102);
+  transition: 250ms ease-in-out;
+  font-style: italic;
+}
+.gotoprofile:hover {
+  cursor: pointer;
+  color: rgb(199, 89, 89);
+}
+@media only screen and (max-width: 670px) {
+  .homeDetails h2 {
+    font-size: large;
+  }
+  .homeOwnDetails {
+    margin-top: 5vh;
+  }
+  .helloHeading h1 {
+    font-size: 2.2em;
+  }
+  .helloSignImage {
+    margin-top: 3vh;
+  }
+}

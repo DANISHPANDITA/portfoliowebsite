@@ -1,0 +1,127 @@
+/** @format */
+
+.header {
+  flex: 0.3;
+  background: #67b26f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #4ca2cd,
+    #67b26f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #4ca2cd,
+    #67b26f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.avatar {
+  margin-top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10vw !important;
+  width: 10vw !important;
+}
+.headerItems {
+  margin-top: 10vh;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.headerItemActive {
+  margin-top: 2vh;
+  border-radius: 0.7vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 4vw 0 4vw;
+  background: #43c6ac; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f8ffae,
+    #43c6ac
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f8ffae,
+    #43c6ac
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  transition: 300ms ease-in-out;
+}
+
+.headerItem {
+  margin-top: 2vh;
+  border-radius: 0.7vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 4vw 0 4vw;
+  transition: 300ms ease-in-out;
+}
+.headerItem:hover {
+  cursor: pointer;
+  background-color: #7c9473;
+}
+.HeaderItemText {
+  font-size: large;
+  color: #383e56;
+  font-family: cursive;
+  font-weight: bolder;
+  margin-left: 2.5vw;
+}
+@media only screen and (max-width: 599px) {
+  .header {
+    flex: 0.2;
+    top: 0;
+    z-index: 1;
+    position: sticky;
+  }
+  .headerItems {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1vh;
+    margin-bottom: 0.5vh;
+  }
+  .headerItem {
+    margin-left: 1vw;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2vw 0 2vw;
+  }
+  .headerItemActive {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2vw 0 2vw;
+    background: #43c6ac; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #f8ffae,
+      #43c6ac
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #f8ffae,
+      #43c6ac
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transition: 300ms ease-in-out;
+  }
+  .headerItemActive .iconSvg,
+  .headerItemActive .HeaderItemText {
+    color: rgb(216, 129, 129) !important;
+  }
+  .avatar {
+    margin-top: 2vh;
+    height: 15vw !important;
+    width: 15vw !important;
+  }
+  .HeaderItemText {
+    margin-bottom: 0;
+    font-size: small;
+  }
+}

@@ -1,0 +1,67 @@
+/** @format */
+.skillPage {
+  flex: 0.7;
+  background: #5a3f37; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #2c7744,
+    #5a3f37
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #2c7744,
+    #5a3f37
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.skillListTitle {
+  margin-top: 0;
+  text-align: center;
+  font-family: cursive;
+  font-size: xx-large;
+  font-weight: bolder;
+  background-color: rgb(30, 126, 113);
+  padding: 0.8vh 0 0.8vh 0;
+  font-style: oblique;
+  color: rgb(109, 48, 48);
+}
+.skillsList {
+  list-style-type: none;
+}
+.skillsList li {
+  font-family: cursive;
+  font-weight: 900;
+  font-size: large;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(191, 253, 255, 0.616);
+  transition: 200ms ease-in-out;
+  width: 80%;
+  padding: 0.9vh 3vh 0.5vh 3vh;
+  border-radius: 2vh;
+  margin-bottom: 2vh;
+}
+.skillsList li:hover {
+  font-style: oblique;
+  color: rgb(185, 149, 48);
+  background-color: rgb(139, 187, 189);
+}
+@media (min-width: 600px) {
+  .skillListTitle {
+    background-color: rgb(30, 126, 113);
+    padding: 0.8vh 0 0.8vh 0;
+    font-style: oblique;
+    top: 0;
+    color: rgb(109, 48, 48);
+    position: sticky;
+    z-index: 1;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .skillPage {
+    flex: 0.8;
+  }
+  .skillListTitle {
+    font-size: x-large;
+  }
+}
