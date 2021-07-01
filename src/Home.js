@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { changeNavSelection } from "./app/counterSlice";
 import "./Home.css";
 import image from "./img/helloSign.png";
-import Zoom from "react-reveal/Zoom";
+import Fade from "react-reveal/Fade";
 function Home() {
   const dispatch = useDispatch();
 
@@ -13,30 +13,30 @@ function Home() {
     <div className="home">
       <div className="homeDetails">
         <div className="helloHeading">
-          <Zoom top duration={1500}>
+          <Fade top duration={1500}>
             <h1>
               Hello, There <img className="helloSignImage" src={image} alt="" />
             </h1>
-          </Zoom>
+          </Fade>
         </div>
-        <Zoom top delay={1000}>
+        <Fade left duration={1500} delay={1500}>
           <p>My name is </p>
-        </Zoom>
-        <Zoom top delay={1500}>
+        </Fade>
+        <Fade right duration={1500} delay={2000}>
           <h2>Danish Pandita</h2>
-        </Zoom>
+        </Fade>
         <div className="homeOwnDetails">
-          <Zoom top delay={2000}>
+          <Fade left duration={1500} delay={2500}>
             <p>I'm a front-end developer!</p>
-          </Zoom>
-          <Zoom top delay={2500}>
+          </Fade>
+          <Fade right duration={1500} delay={3000}>
             <p>Ready to learn anytime !!!</p>
-          </Zoom>
+          </Fade>
         </div>
-        <Zoom top delay={3000}>
+        <Fade left duration={1500} delay={3500}>
           <p>Check out more about me </p>
-        </Zoom>
-        <Zoom top delay={3000}>
+        </Fade>
+        <Fade bottom duration={1500} delay={4500}>
           <p
             onClick={() => {
               dispatch(changeNavSelection("Profile"));
@@ -44,7 +44,7 @@ function Home() {
             className="gotoprofile">
             GO TO Profile
           </p>
-        </Zoom>
+        </Fade>
       </div>
     </div>
   );
