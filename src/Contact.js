@@ -6,6 +6,9 @@ import emailjs from "emailjs-com";
 import { db } from "./firebase";
 
 function Contact() {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   const [emailSentStatus, setemailSentStatus] = useState(true);
   const [FetchedMails, setFetchedMails] = useState([]);
   const [Name, setName] = useState("");

@@ -1,10 +1,13 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect } from "react";
 import "./SkillPage.css";
 import { LinearProgress } from "@material-ui/core";
 
 function SkillPage() {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className="skillPage">
       <p className="skillListTitle">Skills / Programming Languages known</p>
@@ -15,7 +18,7 @@ function SkillPage() {
             color="secondary"
             style={{
               marginTop: "0.5vh",
-              height: "0.7vh",
+              height: "0.4vh",
               borderRadius: "10vh",
             }}
             variant="determinate"
@@ -28,7 +31,7 @@ function SkillPage() {
           <LinearProgress
             style={{
               marginTop: "0.5vh",
-              height: "0.7vh",
+              height: "0.4vh",
               borderRadius: "10vh",
             }}
             variant="determinate"
@@ -41,7 +44,7 @@ function SkillPage() {
           <LinearProgress
             style={{
               marginTop: "0.5vh",
-              height: "0.7vh",
+              height: "0.4vh",
               borderRadius: "10vh",
             }}
             variant="determinate"
@@ -55,7 +58,7 @@ function SkillPage() {
             color="secondary"
             style={{
               marginTop: "0.5vh",
-              height: "0.7vh",
+              height: "0.4vh",
               borderRadius: "10vh",
             }}
             variant="determinate"
@@ -68,7 +71,7 @@ function SkillPage() {
           <LinearProgress
             style={{
               marginTop: "0.5vh",
-              height: "0.7vh",
+              height: "0.4vh",
               borderRadius: "10vh",
             }}
             variant="determinate"
@@ -81,7 +84,7 @@ function SkillPage() {
           <LinearProgress
             style={{
               marginTop: "0.5vh",
-              height: "0.7vh",
+              height: "0.4vh",
               borderRadius: "10vh",
             }}
             variant="determinate"
@@ -94,7 +97,7 @@ function SkillPage() {
           <LinearProgress
             style={{
               marginTop: "0.5vh",
-              height: "0.7vh",
+              height: "0.4vh",
               borderRadius: "10vh",
             }}
             variant="determinate"
@@ -108,7 +111,7 @@ function SkillPage() {
             color="secondary"
             style={{
               marginTop: "0.5vh",
-              height: "0.7vh",
+              height: "0.4vh",
               borderRadius: "10vh",
             }}
             variant="determinate"
@@ -121,7 +124,7 @@ function SkillPage() {
           <LinearProgress
             style={{
               marginTop: "0.5vh",
-              height: "0.7vh",
+              height: "0.4vh",
               borderRadius: "10vh",
             }}
             variant="determinate"
@@ -134,7 +137,7 @@ function SkillPage() {
           <LinearProgress
             style={{
               marginTop: "0.5vh",
-              height: "0.7vh",
+              height: "0.4vh",
               borderRadius: "10vh",
             }}
             variant="determinate"
@@ -147,7 +150,7 @@ function SkillPage() {
           <LinearProgress
             style={{
               marginTop: "0.5vh",
-              height: "0.7vh",
+              height: "0.4vh",
               borderRadius: "10vh",
             }}
             variant="determinate"
@@ -161,7 +164,7 @@ function SkillPage() {
             color="secondary"
             style={{
               marginTop: "0.5vh",
-              height: "0.7vh",
+              height: "0.4vh",
               borderRadius: "10vh",
             }}
             variant="determinate"

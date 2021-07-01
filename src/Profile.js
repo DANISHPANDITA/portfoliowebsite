@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect } from "react";
 import "./Profile.css";
 import image1 from "./img/buspass.png";
 import image2 from "./img/gitajibysharnagat.png";
@@ -12,6 +12,9 @@ import { useDispatch } from "react-redux";
 import { changeNavSelection } from "./app/counterSlice";
 
 function Profile() {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   const dispatch = useDispatch();
   return (
     <div className="profile">

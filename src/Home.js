@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { changeNavSelection } from "./app/counterSlice";
 import "./Home.css";
@@ -8,7 +8,9 @@ import image from "./img/helloSign.png";
 import Fade from "react-reveal/Fade";
 function Home() {
   const dispatch = useDispatch();
-
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className="home">
       <div className="homeDetails">
@@ -27,7 +29,7 @@ function Home() {
         </Fade>
         <div className="homeOwnDetails">
           <Fade left duration={1500} delay={2500}>
-            <p>I'm a front-end developer!</p>
+            <p>A front-end enthusiast!!</p>
           </Fade>
           <Fade right duration={1500} delay={3000}>
             <p>Ready to learn anytime !!!</p>
@@ -42,7 +44,7 @@ function Home() {
               dispatch(changeNavSelection("Profile"));
             }}
             className="gotoprofile">
-            GO TO Profile
+            GO TO <em>Profile</em>
           </p>
         </Fade>
       </div>
