@@ -31,7 +31,24 @@
   padding: 0 4vw 0 4vw;
   transition: 300ms ease-in-out;
 }
-
+.optionsCancelIcon {
+  margin-top: 2vh;
+  color: rgb(148, 7, 7) !important;
+  transition: 250ms ease-in-out;
+}
+.optionsCancelIcon:hover {
+  cursor: pointer;
+  color: rgb(233, 92, 116) !important;
+}
+.optionsIcon {
+  margin-top: 2vh;
+  color: rgb(19, 148, 7) !important;
+  transition: 250ms ease-in-out;
+}
+.optionsIcon:hover {
+  cursor: pointer;
+  color: rgb(104, 233, 92) !important;
+}
 .headerItem {
   margin-top: 2vh;
   border-radius: 0.7vw;
