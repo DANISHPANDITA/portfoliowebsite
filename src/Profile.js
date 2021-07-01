@@ -49,8 +49,9 @@ function Profile() {
             (<b>Session</b> : 2016-17)
           </p>
           <p>
-            Scored <b>85.6%</b> (P.C.M + C.S){" "}
+            Scored <b>85.6%</b>
           </p>
+          <p>(P.C.M + C.S)</p>
         </div>
         <div className="schoolImgMap">
           <center>
@@ -87,8 +88,9 @@ function Profile() {
             (<b>Branch</b> : B.Tech CSE)
           </p>
           <p>
-            Scored C.G.P.A - <b>7.44</b> (Till 7th Sem)
+            Scored C.G.P.A - <b>7.44</b>
           </p>
+          <p> (Till 7th Sem) </p>
         </div>
         <div className="schoolImgMap">
           <center>

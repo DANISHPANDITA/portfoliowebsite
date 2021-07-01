@@ -20,17 +20,15 @@ function Home() {
         <h2>Danish Pandita</h2>
         <div className="homeOwnDetails">
           <p>I'm a front-end developer!</p>
-          <p>Ready to lean anytime !!!</p>
+          <p>Ready to learn anytime !!!</p>
         </div>
-        <p>
-          Check out more about me ->{" "}
-          <span
-            onClick={() => {
-              dispatch(changeNavSelection("Profile"));
-            }}
-            className="gotoprofile">
-            GO TO Profile
-          </span>
+        <p>Check out more about me </p>
+        <p
+          onClick={() => {
+            dispatch(changeNavSelection("Profile"));
+          }}
+          className="gotoprofile">
+          GO TO Profile
         </p>
       </div>
     </div>

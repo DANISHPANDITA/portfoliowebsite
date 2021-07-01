@@ -68,7 +68,7 @@ function Contact() {
 
   return (
     <div className="contact">
-      <p className="contactTitle">Contact at the given addresses</p>
+      <h2 className="contactTitle">Contact at the given addresses</h2>
       <div className="contactField">
         <p className="contactOptTitle">Github</p>
         <p

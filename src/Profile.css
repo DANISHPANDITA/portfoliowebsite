@@ -1,19 +1,8 @@
 /** @format */
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 .profile {
   flex: 0.7;
-  background: #5433ff; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #a5fecb,
-    #20bdff,
-    #5433ff
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #a5fecb,
-    #20bdff,
-    #5433ff
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: rgb(237, 250, 234);
 }
 .projectImage {
   width: 70%;
@@ -22,7 +11,7 @@
 h3,
 h5,
 p {
-  font-family: cursive;
+  font-family: "Fredoka One", cursive;
   text-align: center;
 }
 .horRow {
@@ -30,13 +19,15 @@ p {
   border-width: 1px;
 }
 .profile h3 {
-  color: rgb(177, 255, 153);
+  color: rgb(124, 176, 255);
+  font-variant: small-caps;
+  font-size: xx-large;
   text-decoration: underline;
 }
 .profile h2 {
-  color: rgb(131, 54, 54);
-  font-size: xx-large;
-  font-style: italic;
+  color: rgb(146, 25, 25);
+  font-size: xx-large !important;
+  font-variant: small-caps;
   text-decoration: underline;
 }
 .linktootherpage {
@@ -53,7 +44,7 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: rgb(75, 128, 110);
+  background-color: rgb(106, 109, 79);
   width: 85%;
   margin-left: auto;
   margin-right: auto;
@@ -63,6 +54,9 @@ p {
 }
 .schoolProfileDetails {
   flex: 0.7;
+}
+.schoolProfileDetails p {
+  font-size: x-large;
 }
 .schoolImgMap {
   flex: 0.3;
@@ -76,6 +70,7 @@ p {
 }
 .schoolImgMapImage:hover {
   cursor: pointer;
+  transform: scale(0.9);
   opacity: 0.5;
 }
 .project {
@@ -85,13 +80,14 @@ p {
   border-radius: 0.9vw;
   padding: 0.7vw 0 0.7vw 0;
   margin-bottom: 2vh;
-  background-color: rgb(75, 128, 110);
+  background-color: rgb(106, 109, 79);
 }
 .gotocontact {
-  font-weight: 1000;
-  color: rgb(164, 231, 102);
+  font-weight: bolder;
+  font-size: large;
+  color: rgb(46, 46, 46);
   transition: 250ms ease-in-out;
-  font-style: italic;
+  font-style: oblique;
 }
 .gotocontact:hover {
   cursor: pointer;
@@ -101,26 +97,35 @@ p {
   margin-left: auto;
   margin-right: auto;
   border-radius: 0.8vw;
+  font-size: large;
   padding: 0.5vh 1vh 0.5vh 1vh;
   width: 90%;
   background-color: rgb(228, 235, 210);
 }
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 1250px) {
   .schoolProfile {
+    width: 90%;
     flex-direction: column;
-    border-radius: 1.5vw;
+    border-radius: 2vw;
   }
+  .schoolImgMapImage {
+    object-fit: contain;
+    height: auto;
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 599px) {
   .schoolImgMapImage {
     border-radius: 1.3vw;
   }
   .descProject {
     text-align: justify;
-    font-size: small;
-  }
-  .profile h2 {
     font-size: large;
   }
+  .profile h2 {
+    font-size: xx-large;
+  }
   .profile h3 {
-    font-size: small;
+    font-size: xx-large;
   }
 }
