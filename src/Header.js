@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import { Avatar } from "@material-ui/core";
 import { BsHouseFill } from "react-icons/bs";
@@ -13,7 +13,12 @@ import { ImCancelCircle } from "react-icons/im";
 import Fade from "react-reveal/Fade";
 function Header() {
   const [navState, setnavState] = useState(false);
-
+  const [smallScreen, setSmallScreen] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth < 599) {
+      setSmallScreen(true);
+    }
+  }, []);
   const navSelected = useSelector(selectNavSelection);
   const dispatch = useDispatch();
   return (
@@ -23,7 +28,7 @@ function Header() {
         src="https://lh3.googleusercontent.com/ogw/ADea4I4UGcPdO9yqMJQFDRRmXDXstgJYEHMxt3aUg1n9Tg=s83-c-mo"
         alt=""
       />
-      {window.innerWidth > 599 ? (
+      {!smallScreen ? (
         <div className="headerItems">
           <div
             onClick={() => {
@@ -32,11 +37,7 @@ function Header() {
             className={`${
               navSelected === "Home" ? "headerItemActive" : "headerItem"
             }`}>
-            <BsHouseFill
-              className="iconSvg"
-              size={window.innerWidth > 599 ? "3vw" : "6vw"}
-              color="#383E56"
-            />
+            <BsHouseFill className="iconSvg" size="3vw" color="#383E56" />
             <p className="HeaderItemText">Home</p>
           </div>
           <div
@@ -46,11 +47,7 @@ function Header() {
             className={`${
               navSelected === "Profile" ? "headerItemActive" : "headerItem"
             }`}>
-            <CgProfile
-              className="iconSvg"
-              size={window.innerWidth > 599 ? "3vw" : "6vw"}
-              color="#383E56"
-            />
+            <CgProfile className="iconSvg" size="3vw" color="#383E56" />
             <p className="HeaderItemText">Profile</p>
           </div>
           <div
@@ -60,11 +57,7 @@ function Header() {
             className={`${
               navSelected === "Skills" ? "headerItemActive" : "headerItem"
             }`}>
-            <AiFillProfile
-              className="iconSvg"
-              size={window.innerWidth > 599 ? "3vw" : "6vw"}
-              color="#383E56"
-            />
+            <AiFillProfile className="iconSvg" size="3vw" color="#383E56" />
             <p className="HeaderItemText">Skills</p>
           </div>
           <div
@@ -74,15 +67,11 @@ function Header() {
             className={`${
               navSelected === "Contact" ? "headerItemActive" : "headerItem"
             }`}>
-            <CgPhone
-              className="iconSvg"
-              size={window.innerWidth > 599 ? "3vw" : "6vw"}
-              color="#383E56"
-            />
+            <CgPhone className="iconSvg" size="3vw" color="#383E56" />
             <p className="HeaderItemText">Contact</p>
           </div>
         </div>
-      ) : navState ? (
+      ) : navState && smallScreen ? (
         <div>
           <center>
             <ImCancelCircle
@@ -102,11 +91,7 @@ function Header() {
                 className={`${
                   navSelected === "Home" ? "headerItemActive" : "headerItem"
                 }`}>
-                <BsHouseFill
-                  className="iconSvg"
-                  size={window.innerWidth > 599 ? "3vw" : "6vw"}
-                  color="#383E56"
-                />
+                <BsHouseFill className="iconSvg" size="6vw" color="#383E56" />
                 <p className="HeaderItemText">Home</p>
               </div>
             </Fade>
@@ -118,11 +103,7 @@ function Header() {
                 className={`${
                   navSelected === "Profile" ? "headerItemActive" : "headerItem"
                 }`}>
-                <CgProfile
-                  className="iconSvg"
-                  size={window.innerWidth > 599 ? "3vw" : "6vw"}
-                  color="#383E56"
-                />
+                <CgProfile className="iconSvg" size="6vw" color="#383E56" />
                 <p className="HeaderItemText">Profile</p>
               </div>
             </Fade>{" "}
@@ -134,11 +115,7 @@ function Header() {
                 className={`${
                   navSelected === "Skills" ? "headerItemActive" : "headerItem"
                 }`}>
-                <AiFillProfile
-                  className="iconSvg"
-                  size={window.innerWidth > 599 ? "3vw" : "6vw"}
-                  color="#383E56"
-                />
+                <AiFillProfile className="iconSvg" size="6vw" color="#383E56" />
                 <p className="HeaderItemText">Skills</p>
               </div>
             </Fade>{" "}
@@ -150,11 +127,7 @@ function Header() {
                 className={`${
                   navSelected === "Contact" ? "headerItemActive" : "headerItem"
                 }`}>
-                <CgPhone
-                  className="iconSvg"
-                  size={window.innerWidth > 599 ? "3vw" : "6vw"}
-                  color="#383E56"
-                />
+                <CgPhone className="iconSvg" size="6vw" color="#383E56" />
                 <p className="HeaderItemText">Contact</p>
               </div>
             </Fade>
