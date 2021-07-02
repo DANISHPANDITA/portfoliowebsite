@@ -4,10 +4,11 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { changeNavSelection } from "./app/counterSlice";
 import "./Home.css";
-import image from "./img/helloSign.png";
 import Fade from "react-reveal/Fade";
 function Home() {
   const dispatch = useDispatch();
+  const handImg =
+    "https://firebasestorage.googleapis.com/v0/b/danishpanditaportfolio.appspot.com/o/helloSign.png?alt=media&token=f73d02cf-76a3-4d98-b661-0426716aa4d7";
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -17,7 +18,8 @@ function Home() {
         <div className="helloHeading">
           <Fade top duration={1500}>
             <h1>
-              Hello, There <img className="helloSignImage" src={image} alt="" />
+              Hello, There{" "}
+              <img className="helloSignImage" src={handImg} alt="" />
             </h1>
           </Fade>
         </div>

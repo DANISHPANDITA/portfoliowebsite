@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import "./Contact.css";
 import emailjs from "emailjs-com";
 import { db } from "./firebase";
+import { TransverseLoading } from "react-loadingg";
 
 function Contact() {
   useEffect(() => {
@@ -13,8 +14,16 @@ function Contact() {
   const [FetchedMails, setFetchedMails] = useState([]);
   const [Name, setName] = useState("");
   const [EMAIL, setEMAIL] = useState("");
+  const [Contacts, setContacts] = useState([]);
   const [Message, setMessage] = useState("");
-
+  useEffect(() => {
+    db.collection("PortfolioSite")
+      .doc("4")
+      .collection("Contacts")
+      .onSnapshot((snapshot) =>
+        setContacts(snapshot.docs.map((doc) => doc.data()))
+      );
+  }, []);
   useEffect(() => {
     db.collection("PortfolioSite")
       .doc("1")
@@ -68,70 +77,55 @@ function Contact() {
       }
     }
   }
-
-  return (
-    <div className="contact">
-      <h2 className="contactTitle">Contact at the given addresses</h2>
-      <div className="contactField">
-        <p className="contactOptTitle">Github</p>
-        <p
-          className="contactOptRedirect"
-          onClick={() => {
-            window.open("https://github.com/DANISHPANDITA");
-          }}>
-          github/DanishPandita
-        </p>
+  if (Contacts.length > 0) {
+    return (
+      <div className="contact">
+        <h2 className="contactTitle">Contact at the given addresses</h2>
+        {Contacts.map((contact) => (
+          <div key={Contacts.indexOf(contact)} className="contactField">
+            <p className="contactOptTitle">{contact.field}</p>
+            <p
+              className="contactOptRedirect"
+              onClick={() => {
+                window.open(`${contact.link}`);
+              }}>
+              {contact.contactReach}
+            </p>
+          </div>
+        ))}
+        <h2 className="sendMailTitle">or Send a mail</h2>
+        {emailSentStatus ? (
+          <form id="form" className="MailSendForm" onSubmit={sendEmail}>
+            <label className="formLabel">Name</label>
+            <input
+              onChange={(e) => setName(e.target.value)}
+              className="formData"
+              type="text"
+              name="name"
+            />
+            <label className="formLabel">Email</label>
+            <input
+              onChange={(e) => setEMAIL(e.target.value)}
+              className="formData"
+              type="email"
+              name="email"
+            />
+            <label className="formLabel">Message</label>
+            <textarea
+              onChange={(e) => setMessage(e.target.value)}
+              className="formDataOne"
+              name="message"
+            />
+            <input className="btnMailSubmit" type="submit" value="Send" />
+          </form>
+        ) : (
+          <p className="sentMailLine">Mail Sent</p>
+        )}
       </div>
-      <div className="contactField">
-        <p className="contactOptTitle">Instagram</p>
-        <p
-          className="contactOptRedirect"
-          onClick={() => {
-            window.open("https://instagram.com/pandita_danish");
-          }}>
-          instagram/DanishPandita
-        </p>
-      </div>
-      <div className="contactField">
-        <p className="contactOptTitle">Twitter</p>
-        <p
-          className="contactOptRedirect"
-          onClick={() => {
-            window.open("https://twitter.com/DanishPandita19");
-          }}>
-          twitter/DanishPandita
-        </p>
-      </div>
-      <h2 className="sendMailTitle">or Send a mail</h2>
-      {emailSentStatus ? (
-        <form id="form" className="MailSendForm" onSubmit={sendEmail}>
-          <label className="formLabel">Name</label>
-          <input
-            onChange={(e) => setName(e.target.value)}
-            className="formData"
-            type="text"
-            name="name"
-          />
-          <label className="formLabel">Email</label>
-          <input
-            onChange={(e) => setEMAIL(e.target.value)}
-            className="formData"
-            type="email"
-            name="email"
-          />
-          <label className="formLabel">Message</label>
-          <textarea
-            onChange={(e) => setMessage(e.target.value)}
-            className="formDataOne"
-            name="message"
-          />
-          <input className="btnMailSubmit" type="submit" value="Send" />
-        </form>
-      ) : (
-        <p className="sentMailLine">Mail Sent</p>
-      )}
-    </div>
-  );
+    );
+  } else {
+    return <TransverseLoading />;
+  }
 }
 
 export default Contact;

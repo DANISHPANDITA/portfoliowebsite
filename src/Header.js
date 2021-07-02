@@ -11,7 +11,11 @@ import { changeNavSelection, selectNavSelection } from "./app/counterSlice";
 import { IoIosOptions } from "react-icons/io";
 import { ImCancelCircle } from "react-icons/im";
 import Fade from "react-reveal/Fade";
+import FileSaver from "file-saver";
+
 function Header() {
+  const avatarImage =
+    "https://firebasestorage.googleapis.com/v0/b/danishpanditaportfolio.appspot.com/o/avatarImage.jpg?alt=media&token=369b9ab6-0720-4661-8f6c-171b451bf457";
   const [navState, setnavState] = useState(false);
   const [smallScreen, setSmallScreen] = useState(false);
   useEffect(() => {
@@ -21,13 +25,15 @@ function Header() {
   }, []);
   const navSelected = useSelector(selectNavSelection);
   const dispatch = useDispatch();
+  const resumeDownload = () => {
+    FileSaver.saveAs(
+      "https://firebasestorage.googleapis.com/v0/b/danishpanditaportfolio.appspot.com/o/Danish%20Pandita%20Resume.pdf?alt=media&token=f8fb1e4b-7561-46fc-aadc-b7e0f488e1d8",
+      "DanishPanditaResume.pdf"
+    );
+  };
   return (
     <div className="header">
-      <Avatar
-        className="avatar"
-        src="https://lh3.googleusercontent.com/ogw/ADea4I4UGcPdO9yqMJQFDRRmXDXstgJYEHMxt3aUg1n9Tg=s83-c-mo"
-        alt=""
-      />
+      <Avatar className="avatar" src={avatarImage} alt="" />
       {!smallScreen ? (
         <div className="headerItems">
           <div
@@ -70,6 +76,9 @@ function Header() {
             <CgPhone className="iconSvg" size="3vw" color="#383E56" />
             <p className="HeaderItemText">Contact</p>
           </div>
+          <p onClick={resumeDownload} className="downloadResume">
+            Download Resume
+          </p>
         </div>
       ) : navState && smallScreen ? (
         <div>
@@ -130,6 +139,11 @@ function Header() {
                 <CgPhone className="iconSvg" size="6vw" color="#383E56" />
                 <p className="HeaderItemText">Contact</p>
               </div>
+            </Fade>
+            <Fade bottom delay={2000}>
+              <p onClick={resumeDownload} className="downloadResume">
+                Download Resume
+              </p>
             </Fade>
           </div>
         </div>

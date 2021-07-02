@@ -73,6 +73,18 @@
 .headerItemActive .HeaderItemText {
   color: rgb(216, 129, 129) !important;
 }
+.downloadResume {
+  color: rgb(32, 26, 94);
+  transition: 300ms ease-in-out;
+  padding: 0 4vw 0 4vw;
+  width: fit-content;
+  align-items: center;
+}
+.downloadResume:hover {
+  cursor: pointer;
+  color: rgb(10, 117, 112);
+  text-decoration: underline;
+}
 @media only screen and (max-width: 599px) {
   .header {
     flex: 0.2;
@@ -91,12 +103,12 @@
     margin-left: 1vw;
     flex-direction: column;
     align-items: center;
-    padding: 0 2vw 0 2vw;
+    padding: 0 1vw 0 1vw;
   }
   .headerItemActive {
     flex-direction: column;
     align-items: center;
-    padding: 0 2vw 0 2vw;
+    padding: 0 1vw 0 1vw;
     transition: 300ms ease-in-out;
   }
   .headerItemActive .iconSvg,

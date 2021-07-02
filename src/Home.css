@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 .home {
   flex: 0.7;
-  min-height:100vh;
+  min-height: 100vh;
   background-color: rgb(237, 250, 234);
 }
 .homeDetails {
@@ -13,7 +13,8 @@
   width: 95%;
   background-color: #488156 !important;
   text-align: center;
-  background: url("./img/homeBack.jpg") no-repeat;
+  background: url("https://firebasestorage.googleapis.com/v0/b/danishpanditaportfolio.appspot.com/o/homeBack.jpg?alt=media&token=11a4db49-33ab-47a2-8536-9728226015f7")
+    no-repeat;
   background-position: center;
   background-blend-mode: soft-light;
 }
@@ -63,6 +64,7 @@
   font-weight: bold !important;
   transition: 250ms ease-in-out;
 }
+
 .gotoprofile:hover {
   cursor: pointer;
   color: rgb(199, 89, 89);
