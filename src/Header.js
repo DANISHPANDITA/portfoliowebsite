@@ -14,6 +14,10 @@ import Fade from "react-reveal/Fade";
 import FileSaver from "file-saver";
 
 function Header() {
+  const resume =
+    "https://firebasestorage.googleapis.com/v0/b/danishpanditaportfolio.appspot.com/o/Danish%20Pandita%20Resume.pdf?alt=media&token=a0f99f8a-d8d8-46e9-9e44-54943ee269db";
+  const avatarImage =
+    "https://firebasestorage.googleapis.com/v0/b/danishpanditaportfolio.appspot.com/o/avatarImage.jpg?alt=media&token=369b9ab6-0720-4661-8f6c-171b451bf457";
   const [navState, setNavState] = useState(false);
   const [smallScreen, setSmallScreen] = useState(false);
   useEffect(() => {
