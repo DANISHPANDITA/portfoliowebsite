@@ -14,9 +14,7 @@ import Fade from "react-reveal/Fade";
 import FileSaver from "file-saver";
 
 function Header() {
-  const avatarImage =
-    "https://firebasestorage.googleapis.com/v0/b/danishpanditaportfolio.appspot.com/o/avatarImage.jpg?alt=media&token=369b9ab6-0720-4661-8f6c-171b451bf457";
-  const [navState, setnavState] = useState(false);
+  const [navState, setNavState] = useState(false);
   const [smallScreen, setSmallScreen] = useState(false);
   useEffect(() => {
     if (window.innerWidth < 599) {
@@ -26,10 +24,7 @@ function Header() {
   const navSelected = useSelector(selectNavSelection);
   const dispatch = useDispatch();
   const resumeDownload = () => {
-    FileSaver.saveAs(
-      "https://firebasestorage.googleapis.com/v0/b/danishpanditaportfolio.appspot.com/o/Danish%20Pandita%20Resume.pdf?alt=media&token=f8fb1e4b-7561-46fc-aadc-b7e0f488e1d8",
-      "DanishPanditaResume.pdf"
-    );
+    FileSaver.saveAs(resume);
   };
   return (
     <div className="header">
@@ -87,7 +82,7 @@ function Header() {
               size="6vw"
               className="optionsCancelIcon"
               onClick={() => {
-                setnavState(false);
+                setNavState(false);
               }}
             />
           </center>
@@ -153,7 +148,7 @@ function Header() {
             size="6vw"
             className="optionsIcon"
             onClick={() => {
-              setnavState(true);
+              setNavState(true);
             }}
           />
         </center>
